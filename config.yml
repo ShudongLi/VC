@@ -1,0 +1,51 @@
+# 应用信息
+title: vue-component
+
+# 模板引擎
+views: site/views/ejs
+engine: ejs
+
+# 本地服务端口port，默认3000端口
+port: 4000
+
+# 基础url
+baseUrl: /app
+
+# 别名
+alias:
+  path:
+   sitecomponent: ./site/static/js/components 
+   vcomponent: ./src
+   vconstant: './src/constant'
+   vcless: ./src/less/components
+  vendor:
+   vue: vue/dist/vue.js
+   highlightcss: highlightjs/styles/vs.css
+
+# 第三方库
+vendor: 
+  - vue
+  - vue-router
+  - highlightjs
+  - clipboard
+
+# site
+site:
+  entry: ./site/static/index.es6
+
+# 源文件
+component:
+ # 根路径
+ entry: ./src/index.es6
+ # less
+ less: ./src/less/index.less
+ # alias变量
+ apps: ./static/js/src/apps
+ bases: ./static/js/src/bases
+ state: ./static/js/src/state
+
+# 编译
+build:
+  root: 
+  publicPath:
+

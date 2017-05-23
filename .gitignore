@@ -1,0 +1,11 @@
+# OSX
+#
+.DS_Store
+
+*.o
+node_modules
+!node_modules.zip
+npm-debug.log
+
+static/js/dev
+static/js/pro
