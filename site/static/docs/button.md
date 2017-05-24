@@ -34,16 +34,16 @@
 
 </vc-demo>
 
-通过添加`vc-disabled`属性，设置按钮不可用状态。
+通过添加`disabled`属性，设置按钮不可用状态。
 
 <vc-demo>
 
 <div slot="example">
-<vc-button vc-disabled>禁用按钮</vc-button>
+<vc-button disabled>禁用按钮</vc-button>
 </div>
 
 ```html
-<vc-button vc-disabled>禁用按钮</vc-button>
+<vc-button disabled>禁用按钮</vc-button>
 ```
     
 </vc-demo>

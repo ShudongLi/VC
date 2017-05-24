@@ -8,6 +8,7 @@ import locale from './locale'
 import button from './components/button'
 import buttonGroup from './components/buttonGroup'
 import icon from './components/icon'
+import radio from './components/radio'
 
 function install(Vue) {
 
@@ -28,5 +29,6 @@ export {
 
 	button,
 	buttonGroup,
-	icon
+	icon,
+	radio
 }

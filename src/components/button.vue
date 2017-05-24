@@ -10,12 +10,12 @@
 
 <script>
 
-	import { VC_NAMESPACE, VC_CLASS_SEPARATOR } from 'vconstant'
+	import { getClassPrefix } from 'vcutils'
 	import mixins from '../mixins'
 
 	import icon from './icon'
 
-	const prefix = VC_NAMESPACE + VC_CLASS_SEPARATOR + 'button' + VC_CLASS_SEPARATOR
+	const prefix = getClassPrefix('button')
 	
 	export default {
 
@@ -42,7 +42,7 @@
 				default: ''
 			},
 
-			'vc-disabled': {
+			'disabled': {
 
 				type: Boolean,
 				default: false
@@ -58,14 +58,6 @@
 
 		computed: {
 
-			disabled() {
-
-				if(this.vcDisabled || this.vcDisabled === '') {
-
-					return 'disabled'
-				}
-			},
-
 			btnClass() {
 
 				let classes = []
@@ -80,9 +72,9 @@
 					classes.push(prefix + this.vcSize)
 				}
 
-				if(this.vcDisabled || this.vcDisabled === '') {
+				if(this.disabled || this.disabled === '') {
 
-					classes.push(prefix + 'disabled')
+					classes.push('disabled')
 				}
 
 				if(this.vcCircle || this.vcCircle === '') {
@@ -91,14 +83,6 @@
 				} 
 
 				return classes
-			}
-		},
-
-		methods: {
-
-			alert() {
-
-				alert('哈哈')
 			}
 		}
 	}

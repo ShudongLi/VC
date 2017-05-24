@@ -4,6 +4,9 @@
  * @module
  * @author hahacoo zhangdi525@163.com
  */
+import { VC_NAMESPACE, VC_CLASS_SEPARATOR } from 'vconstant'
+
+let rawToString = Object.prototype.toString
 
 function getClosestVueParent($parent, cssClass) {
 
@@ -25,7 +28,12 @@ function getClosestVueParent($parent, cssClass) {
 	return getClosestVueParent($parent.$parent, cssClass)
 }
 
-function type(target) {
+function getClassPrefix(type) {
+
+	return VC_NAMESPACE + VC_CLASS_SEPARATOR + type + VC_CLASS_SEPARATOR
+}
+
+function typeis(target) {
 
 	let isAny = /^\[object (\w+)\]$/,
         result = isAny.exec(rawToString.call(target))
@@ -38,6 +46,6 @@ export { default as adapter } from './adapter'
 export {
 
 	getClosestVueParent,
-	mixinDocs,
-	type
+	getClassPrefix,
+	typeis
 }

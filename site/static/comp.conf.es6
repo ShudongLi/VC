@@ -1,5 +1,6 @@
 import button from './docs/button'
 import icon from './docs/icon'
+import radio from './docs/radio'
 
 export default [
 
@@ -32,7 +33,7 @@ export default [
 				name: 'Radio',
 				title: 'Radio 单选',
 				url: '/radio',
-				component: icon
+				component: radio
 			}, {
 
 				name: 'Checkbox',

@@ -18,6 +18,7 @@ alias:
    vcomponent: ./src
    vconstant: './src/constant'
    vcless: ./src/less/components
+   vcutils: ./src/utils
   vendor:
    vue: vue/dist/vue.js
    highlightcss: highlightjs/styles/vs.css
