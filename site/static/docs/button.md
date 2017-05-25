@@ -142,6 +142,6 @@
 |:---|:---|:---|:---|
 |vc-type|设置按钮状态，**primary**，**success**，**info**，**warning**，**danger**|String|_|
 |vc-size|设置按钮大小，**lg**，**sm**，**xs**|String|_|
-|vc-disabled|设置按钮禁用状态|Boolean|false|
-|vc-icon|设置按钮图标，参考[font-awesome](http://fontawesome.io/icons/)对应图标样式|String|_|   
+|vc-icon|设置按钮图标，参考[font-awesome](http://fontawesome.io/icons/)对应图标样式|String|_|
+|disabled|设置按钮禁用状态|Boolean|false|
 

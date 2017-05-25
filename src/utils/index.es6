@@ -41,11 +41,52 @@ function typeis(target) {
     return result ? result[1].toLowerCase() : 'unknown'
 }
 
+function contains(source, target) {
+
+	if(!source || !target) {
+
+		return false
+	}
+	
+	if(typeis(source) === 'array') {
+
+		let len = source.length,
+			i = 0
+
+		while(i < len) {
+
+			if(source[i] === target) {
+
+				return true
+			}
+
+			i++
+		}
+
+		return false
+	}
+
+	if(typeis(source) === 'object') {
+
+		for( let key in source) {
+
+			if(source.hasOwnProperty(key) && source[key] == target) {
+
+				return true
+			}
+		}
+
+		return false
+	}
+
+}
+
 export { default as adapter } from './adapter'
 
 export {
 
 	getClosestVueParent,
 	getClassPrefix,
-	typeis
+	typeis,
+	contains
 }

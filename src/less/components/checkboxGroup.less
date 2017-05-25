@@ -1,0 +1,92 @@
+@import '../variables.less';
+@import '../mixins/buttons.less';
+
+.vc-checkbox-group {
+
+	&:after {
+
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+	.vc-checkbox {
+
+		float: left;
+
+		&:not(:last-of-type) {
+
+			margin-right: -1px;
+		}
+
+		span:last-of-type {
+
+			padding: @base-space-vertical @base-space;
+    		display: block;
+			line-height: 1;
+			white-space: nowrap;
+			background: @btn-default-bg;
+			border: 1px solid @btn-default-border;
+			color: @btn-default-color;
+			appearance: none;
+			text-align: center;
+			box-sizing: border-box;
+			outline: none;
+			margin: 0;
+			user-select: none;
+		}
+
+		.vc-checkbox-input {
+			
+			position: absolute;
+			z-index: -1;
+    		opacity: 0;
+
+    		&.is-active {
+
+    			& + span {
+
+    				.button-variant(@btn-primary-color, @btn-primary-bg, @btn-primary-border)
+    			}
+
+    			&.disabled,
+				&[disabled],
+				fieldset[disabled] & {
+					
+					& + span:hover {
+						
+						color: @btn-primary-color;
+						background: @btn-primary-bg;
+						border: 1px solid @btn-primary-border;
+					}
+				}
+    		}
+		}
+
+		&:first-of-type {
+
+			span:last-of-type {
+				
+				border-top-left-radius: @border-radius-base;
+				border-bottom-left-radius: @border-radius-base;
+			}
+		}
+
+		&:last-of-type {
+
+			span:last-of-type {
+
+				border-top-right-radius: @border-radius-base;
+				border-bottom-right-radius: @border-radius-base;
+			}
+		}
+
+		&:hover {
+
+			span:last-of-type {
+
+			    border-color: darken(@btn-default-border, 12%);
+			}
+		}
+	}
+}

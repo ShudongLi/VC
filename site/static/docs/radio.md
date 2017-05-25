@@ -1,6 +1,7 @@
 <script>
     
     import { radio } from 'vcomponent'
+    import { radioGroup } from 'vcomponent'
     import vcDemo from 'sitecomponent/demo'
 
     export default {
@@ -11,14 +12,16 @@
 
                 basicModel: '1',
                 basicModel2: 'a',
-                disabledModel: '1'
+                disabledModel: '1',
+                fm: 'vue'
             }
         },
 
         components: {
 
             vcDemo,
-            vcRadio: radio
+            vcRadio: radio,
+            vcRadioGroup: radioGroup
         },
 
         methods: {
@@ -140,5 +143,53 @@
 
 </vc-demo>
 
+单选组。
 
+<vc-demo>
+
+<div slot="example">
+<vc-radio-group>
+    <vc-radio :vc-model.sync="fm" vc-value="vue">Vue</vc-radio>
+    <vc-radio :vc-model.sync="fm" vc-value="angular">Angular</vc-radio>
+    <vc-radio :vc-model.sync="fm" vc-value="react">react</vc-radio>
+</vc-radio-group>
+</div>
+
+```html
+<vc-radio :vc-model.sync="fm" vc-value="vue">Vue</vc-radio>
+<vc-radio :vc-model.sync="fm" vc-value="angular">Angular</vc-radio>
+<vc-radio :vc-model.sync="fm" vc-value="react">react</vc-radio>
+
+<script>
+    
+    export default {
+
+        data() {
+
+            return {
+
+                fm: 'vue'
+            }
+        }
+    }
+</script>
+```
+
+</vc-demo>
+
+### API
+
+#### Props
+
+|属性|说明|类型|默认值|
+|:---|:---|:---|:---|
+|vc-value|radio的值|String,Number,Boolean|_|
+|vc-model|radio绑定的model|Object|_|
+|disabled|设置按钮禁用状态|Boolean|false|
+
+#### Events
+
+|事件名称|说明|回调参数|
+|:---|:---|:---|:---|
+|radio.change|兼容2.x不支持`.sync`的hack用法|选中radio的值|
 

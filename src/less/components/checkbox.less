@@ -1,23 +1,23 @@
 @import '../variables.less';
 
-.vc-radio {
+.vc-checkbox {
 	
 	cursor: pointer;
 	user-select: none;
 
-	.vc-radio-input {
+	.vc-checkbox-input {
 
 		display: inline-block;
 		vertical-align: middle;
 		line-height: @line-height;
 		position: relative;
 
-		.vc-radio-inner {
+		.vc-checkbox-inner {
 
 			border: 1px solid #bfcbd9;
 		    width: 1.2em;
 		    height: 1.2em;
-		    border-radius: 50%;
+		    border-radius: @border-radius-base;
 		    background-color: #fff;
 		    position: relative;
 		    display: inline-block;
@@ -31,24 +31,24 @@
 		    &:after {
 					
 				content: '';
-				width: 5px;
-				height: 5px;
-				border-radius: 50%;
-				border: 0;
-				background-color: #fff;
-				display: block;
-				position: absolute;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				margin: auto;
-				transform: scale(0);
+			    width: 10px;
+			    height: 5px;
+			    border: 2px solid #fff;
+			    border-top-color: transparent;
+			    border-right-color: transparent;
+			    display: block;
+			    position: absolute;
+			    top: 0;
+			    right: 0;
+			    bottom: 0;
+			    left: 0;
+			    margin: auto;
+			    transform: scale(0) rotateZ(-45deg);
 				transition: transform .15s cubic-bezier(.71,-.46,.88,.6);
 			}
 		}
 
-		.vc-radio-original {
+		.vc-checkbox-original {
 
 			opacity: 0;
 		    outline: none;
@@ -63,7 +63,7 @@
 
 		&.is-active {
 
-			.vc-radio-inner {
+			.vc-checkbox-inner {
 
 				background-color: @brand-primary;
 
@@ -75,19 +75,19 @@
 				&:after {
 					
 					content: '';
-					width: 5px;
-					height: 5px;
-					border-radius: 50%;
-					border: 0;
-					background-color: #fff;
-					display: block;
-					position: absolute;
-					top: 0;
-					right: 0;
-					bottom: 0;
-					left: 0;
-					margin: auto;
-					transform: scale(1);
+				    width: 10px;
+				    height: 5px;
+				    border: 2px solid #fff;
+				    border-top: 0;
+				    border-right: 0;
+				    display: block;
+				    position: absolute;
+				    top: 0;
+				    right: 0;
+				    bottom: 0;
+				    left: 0;
+				    margin: auto;
+				    transform: scale(1) rotateZ(-45deg);
 				}
 			}
 		}
@@ -100,13 +100,13 @@
 			cursor: @cursor-disabled;
 			opacity: .65;
 
-			.vc-radio-inner {
+			.vc-checkbox-inner {
 		
 				background-color: @brand-disabled;
 
 				&:hover {
 
-			    	border: none;
+			    	border: 0;
 			    }
 			}
 		}

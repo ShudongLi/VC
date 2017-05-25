@@ -5,10 +5,13 @@
  * @author hahacoo zhangdi525@163.com
  */
 import locale from './locale'
+import icon from './components/icon'
 import button from './components/button'
 import buttonGroup from './components/buttonGroup'
-import icon from './components/icon'
 import radio from './components/radio'
+import radioGroup from './components/radioGroup'
+import checkbox from './components/checkbox'
+import checkboxGroup from './components/checkboxGroup'
 
 function install(Vue) {
 
@@ -30,5 +33,8 @@ export {
 	button,
 	buttonGroup,
 	icon,
-	radio
+	radio,
+	radioGroup,
+	checkbox,
+	checkboxGroup
 }
