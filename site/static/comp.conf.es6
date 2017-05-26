@@ -2,6 +2,7 @@ import button from './docs/button'
 import icon from './docs/icon'
 import radio from './docs/radio'
 import checkbox from './docs/checkbox'
+import input from './docs/input'
 
 export default [
 
@@ -46,7 +47,7 @@ export default [
 				name: 'Input',
 				title: 'Input 输入框',
 				url: '/input',
-				component: icon
+				component: input
 			}, {
 
 				name: 'InputNumber',

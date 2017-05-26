@@ -19,7 +19,8 @@
 
 			'vc-value': null,
 			'vc-model': null,
-			'disabled': {
+			value: null,
+			disabled: {
 
 				type: Boolean,
 				default: false

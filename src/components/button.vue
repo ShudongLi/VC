@@ -23,11 +23,6 @@
 
 		mixins: [...mixins],
 
-		components: {
-
-			vcIcon: icon
-		},
-
 		props:{
 
 			'vc-type': {
@@ -84,6 +79,11 @@
 
 				return classes
 			}
+		},
+
+		components: {
+
+			vcIcon: icon
 		}
 	}
 

@@ -12,6 +12,7 @@ import radio from './components/radio'
 import radioGroup from './components/radioGroup'
 import checkbox from './components/checkbox'
 import checkboxGroup from './components/checkboxGroup'
+import input from './components/input'
 
 function install(Vue) {
 
@@ -36,5 +37,6 @@ export {
 	radio,
 	radioGroup,
 	checkbox,
-	checkboxGroup
+	checkboxGroup,
+	input
 }

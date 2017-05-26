@@ -21,7 +21,8 @@
 
 			'vc-value': null,
 			'vc-model': [ Boolean, Array ],
-			'disabled': {
+			value: null,
+			disabled: {
 
 				type: Boolean,
 				default: false

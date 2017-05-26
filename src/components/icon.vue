@@ -1,6 +1,6 @@
 <template>
 	
-	<i :class="faClass"></i>
+	<i class="vc-icon" :class="faClass"></i>
 </template>
 
 <script>
@@ -10,6 +10,11 @@
 	const fa = 'fa'
 
 	function parseFa(prop) {
+
+		if(!prop) {
+
+			return null
+		}
 
 		if(prop.indexOf(fa) === 0 || prop === '') {
 
@@ -51,6 +56,4 @@
 	}
 </script>
 
-<style lang="less">
-	
-</style>
+<style src="vcless/icon" lang="less"></style>

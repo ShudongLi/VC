@@ -1,0 +1,71 @@
+@import '../variables.less';
+@import '../mixins/forms.less';
+
+@icon-width: 35px;
+
+.vc-input {
+
+	position: relative;
+	font-size: @font-size-base;
+
+	.vc-input-original {
+		
+		color: @input-color;
+		width: 100%;
+		height: @input-height-base; 
+		padding: @padding-base-vertical @padding-base-horizontal;
+		line-height: @line-height-base;
+	    background-color: #fff;
+	    background-image: none;
+	    border-radius: @border-radius-base;
+	    border: 1px solid @input-border;
+	    box-sizing: border-box;
+	    display: block;
+	    outline: none;
+	    transition: border-color .15s cubic-bezier(.645,.045,.355,1);
+	    appearance: none;
+
+	    .form-control-focus();
+	    .placeholder();
+
+		&[disabled],
+		&[readonly],
+		fieldset[disabled] & {
+			background-color: @input-bg-disabled;
+			opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+		}
+
+		&[disabled],
+		fieldset[disabled] & {
+			cursor: @cursor-disabled;
+		}
+	    
+	}
+
+	.vc-input-icon {
+		
+		width: @icon-width;
+		height: @input-height-base; 
+		line-height: @input-height-base;
+		text-align: center;
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		& + input {
+
+			padding-right: @icon-width;
+		}
+	}
+}
+
+.placeholder(@color: @input-color-placeholder) {
+  // Firefox
+  &::-moz-placeholder {
+    color: @color;
+    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+  }
+  &:-ms-input-placeholder { color: @color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
+}
