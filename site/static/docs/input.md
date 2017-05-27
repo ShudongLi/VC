@@ -84,4 +84,24 @@
 
 </vc-demo>
 
+文本域
+
+<vc-demo>
+
+<div slot="example">
+<p>
+   <vc-input :vc-model.sync="basicModel" placeholder="请输入内容" vc-textarea></vc-input> 
+</p>
+<p>
+   <vc-input :vc-model.sync="basicModel" placeholder="请输入内容" vc-resize="both"vc-textarea></vc-input> 
+</p>
+</div>
+
+```html
+<vc-input placeholder="请输入内容" vc-icon="search"></vc-input>
+```
+
+</vc-demo>
+
+
 

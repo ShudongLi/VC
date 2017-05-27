@@ -3,9 +3,13 @@
 	<label class="vc-radio">
 
 		<span class="vc-radio-input" :class="radioClass">
-
+			
+			<input type="radio" class="vc-radio-original" 
+				v-model="vcModel"
+				:value="vcValue" 
+				:disabled="disabled"
+			>
 			<span class="vc-radio-inner"></span>
-			<input type="radio" class="vc-radio-original" :value="vcValue" v-model="vcModel" :disabled="disabled">
 		</span><span><slot></slot></span>
 	</label>
 

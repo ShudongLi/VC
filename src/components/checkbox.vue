@@ -5,7 +5,11 @@
 		<span class="vc-checkbox-input" :class="checkboxClass">
 
 			<span class="vc-checkbox-inner"></span>
-			<input type="checkbox" class="vc-checkbox-original" :value="vcValue" v-model="vcModel" :disabled="disabled">
+			<input type="checkbox" class="vc-checkbox-original" 
+				v-model="vcModel"
+				:value="vcValue" 
+				:disabled="disabled"
+			>
 		</span><span><slot></slot></span>
 	</label>
 

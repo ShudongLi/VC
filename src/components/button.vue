@@ -1,7 +1,9 @@
 <template>
 	
-	<button class="vc-button" :class="btnClass" :disabled="disabled">
-		
+	<button class="vc-button" 
+		:class="btnClass" 
+		:disabled="disabled"
+	>
 		<vc-icon :vc-name="vcIcon" v-if="vcIcon"></vc-icon>
 		<slot></slot>
 	</button>

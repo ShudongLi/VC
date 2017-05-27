@@ -83,6 +83,8 @@ function contains(source, target) {
 
 export { default as adapter } from './adapter'
 
+export { default as calcTextareaHeight } from './calcTextareaHeight'
+
 export {
 
 	getClosestVueParent,
