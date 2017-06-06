@@ -21,6 +21,8 @@
 	
 	export default {
 
+		name: 'vc-checkbox',
+
 		props: {
 
 			'vc-value': null,

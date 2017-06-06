@@ -1,14 +1,12 @@
 <script>
     
-    import { icon } from 'vcomponent'
     import vcDemo from 'sitecomponent/demo'
 
     export default {
 
         components: {
 
-            vcDemo,
-            vcIcon: icon
+            vcDemo
         }
     }
 </script>

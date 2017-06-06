@@ -1,0 +1,263 @@
+.THEME_NAME {
+	
+	.vc-button {
+
+		color: vc_default_color;
+		background-color: vc_default_background;
+		border: 1px solid vc_default_border;
+
+		&:focus,
+		&.focus {
+			color: vc_default_focus_color;
+			background-color: vc_default_focus_background;
+			    border-color: vc_default_focus_border;
+		}
+		&:hover {
+			color: vc_default_hover_color;
+			background-color: vc_default_hover_background;
+			    border-color: vc_default_hover_border;
+		}
+		&:active,
+		&.active {
+			color: vc_default_active_color;
+			background-color: vc_default_active_background;
+		    border-color: vc_default_active_border;
+
+		    &:hover,
+		    &:focus,
+		    &.focus {
+
+		    	background-color: vc_default_darken_background;
+		    		border-color: vc_default_darken_border;
+		    }
+		}
+		&.disabled,
+		&[disabled],
+		fieldset[disabled] & {
+			&:hover,
+			&:focus,
+			&.focus {
+			  background-color: vc_default_disabled_background;
+			      border-color: vc_default_disabled_border;
+			}
+		}
+
+		&.vc-button-primary {
+		
+			color: vc_primary_color;
+			background-color: vc_primary_background;
+			border: 1px solid vc_primary_border;
+
+			&:focus,
+			&.focus {
+				color: vc_primary_focus_color;
+				background-color: vc_primary_focus_background;
+				    border-color: vc_primary_focus_border;
+			}
+			&:hover {
+				color: vc_primary_hover_color;
+				background-color: vc_primary_hover_background;
+				    border-color: vc_primary_hover_border;
+			}
+			&:active,
+			&.active {
+				color: vc_primary_active_color;
+				background-color: vc_primary_active_background;
+			    border-color: vc_primary_active_border;
+
+			    &:hover,
+			    &:focus,
+			    &.focus {
+
+			    	background-color: vc_primary_darken_background;
+			    		border-color: vc_primary_darken_border;
+			    }
+			}
+			&.disabled,
+			&[disabled],
+			fieldset[disabled] & {
+				&:hover,
+				&:focus,
+				&.focus {
+				  background-color: vc_primary_disabled_background;
+				      border-color: vc_primary_disabled_border;
+				}
+			}
+		}
+
+		&.vc-button-success {
+			
+			color: vc_success_color;
+			background-color: vc_success_background;
+			border: 1px solid vc_success_border;
+
+			&:focus,
+			&.focus {
+				color: vc_success_focus_color;
+				background-color: vc_success_focus_background;
+				    border-color: vc_success_focus_border;
+			}
+			&:hover {
+				color: vc_success_hover_color;
+				background-color: vc_success_hover_background;
+				    border-color: vc_success_hover_border;
+			}
+			&:active,
+			&.active {
+				color: vc_success_active_color;
+				background-color: vc_success_active_background;
+			    border-color: vc_success_active_border;
+
+			    &:hover,
+			    &:focus,
+			    &.focus {
+
+			    	background-color: vc_success_darken_background;
+			    		border-color: vc_success_darken_border;
+			    }
+			}
+			&.disabled,
+			&[disabled],
+			fieldset[disabled] & {
+				&:hover,
+				&:focus,
+				&.focus {
+				  background-color: vc_success_disabled_background;
+				      border-color: vc_success_disabled_border;
+				}
+			}
+		}
+
+		&.vc-button-info {
+			
+			color: vc_info_color;
+			background-color: vc_info_background;
+			border: 1px solid vc_info_border;
+
+			&:focus,
+			&.focus {
+				color: vc_info_focus_color;
+				background-color: vc_info_focus_background;
+				    border-color: vc_info_focus_border;
+			}
+			&:hover {
+				color: vc_info_hover_color;
+				background-color: vc_info_hover_background;
+				    border-color: vc_info_hover_border;
+			}
+			&:active,
+			&.active {
+				color: vc_info_active_color;
+				background-color: vc_info_active_background;
+			    border-color: vc_info_active_border;
+
+			    &:hover,
+			    &:focus,
+			    &.focus {
+
+			    	background-color: vc_info_darken_background;
+			    		border-color: vc_info_darken_border;
+			    }
+
+			}
+			&.disabled,
+			&[disabled],
+			fieldset[disabled] & {
+				&:hover,
+				&:focus,
+				&.focus {
+				  background-color: vc_info_disabled_background;
+				      border-color: vc_info_disabled_border;
+				}
+			}
+		}
+
+		&.vc-button-warning {
+			
+			color: vc_warning_color;
+			background-color: vc_warning_background;
+			border: 1px solid vc_warning_border;
+
+			&:focus,
+			&.focus {
+				color: vc_warning_focus_color;
+				background-color: vc_warning_focus_background;
+				    border-color: vc_warning_focus_border;
+			}
+			&:hover {
+				color: vc_warning_hover_color;
+				background-color: vc_warning_hover_background;
+				    border-color: vc_warning_hover_border;
+			}
+			&:active,
+			&.active {
+				color: vc_warning_active_color;
+				background-color: vc_warning_active_background;
+			    border-color: vc_warning_active_border;
+
+			    &:hover,
+			    &:focus,
+			    &.focus {
+
+			    	background-color: vc_warning_darken_background;
+			    		border-color: vc_warning_darken_border;
+			    }
+			}
+			&.disabled,
+			&[disabled],
+			fieldset[disabled] & {
+				&:hover,
+				&:focus,
+				&.focus {
+				  background-color: vc_warning_disabled_background;
+				      border-color: vc_warning_disabled_border;
+				}
+			}
+		}
+
+		&.vc-button-danger {
+			
+			color: vc_danger_color;
+			background-color: vc_danger_background;
+			border: 1px solid vc_danger_border;
+
+			&:focus,
+			&.focus {
+				color: vc_danger_focus_color;
+				background-color: vc_danger_focus_background;
+				    border-color: vc_danger_focus_border;
+			}
+			&:hover {
+				color: vc_danger_hover_color;
+				background-color: vc_danger_hover_background;
+				    border-color: vc_danger_hover_border;
+			}
+			&:active,
+			&.active {
+				color: vc_danger_active_color;
+				background-color: vc_danger_active_background;
+			    	border-color: vc_danger_active_border;
+
+			    &:hover,
+			    &:focus,
+			    &.focus {
+
+			    	background-color: vc_danger_darken_background;
+			    		border-color: vc_danger_darken_border;
+			    }
+			}
+			&.disabled,
+			&[disabled],
+			fieldset[disabled] & {
+				&:hover,
+				&:focus,
+				&.focus {
+				  background-color: vc_danger_disabled_background;
+				      border-color: vc_danger_disabled_border;
+				}
+			}
+		}
+	}
+
+	
+}

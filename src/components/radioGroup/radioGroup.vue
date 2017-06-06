@@ -8,6 +8,11 @@
 </template>
 
 <script>
+
+	export default {
+
+		name: 'vc-radio-group'
+	}
 	
 </script>
 

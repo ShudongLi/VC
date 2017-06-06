@@ -104,6 +104,12 @@ module.exports = {
 				loader: "style-loader!css-loader!postcss-loader"
 			},
 			{
+				test: /\.theme$/,
+				//modules&localIdentName=[path][name][local][hash:base64:5]路径|文件名|样式名|编码截取
+				//实现less模块化
+				loader: "raw-loader!postcss-loader!less-loader"
+			},
+			{
 				test: /\.less$/,
 				//modules&localIdentName=[path][name][local][hash:base64:5]路径|文件名|样式名|编码截取
 				//实现less模块化

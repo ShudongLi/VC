@@ -3,6 +3,7 @@ import icon from './docs/icon'
 import radio from './docs/radio'
 import checkbox from './docs/checkbox'
 import input from './docs/input'
+import select from './docs/select'
 
 export default [
 
@@ -58,6 +59,7 @@ export default [
 				name: 'Select',
 				title: 'Select 选择器',
 				url: '/select',
+				component: select
 			}, {
 
 				name: 'Switch',

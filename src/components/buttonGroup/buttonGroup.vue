@@ -7,6 +7,11 @@
 </template>
 
 <script>
+
+	export default {
+
+		name: 'vc-button-group'
+	}
 	
 </script>
 

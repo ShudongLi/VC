@@ -1,8 +1,10 @@
+//** Font
 @font-size-base:          14px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 @font-color-default:      #333;
 
+//** Space
 @line-height-base:        1.428571429; // 20/14
 @line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
 @line-height-small:         1.5;
@@ -28,6 +30,7 @@
 @border-radius-large:       6px;
 @border-radius-small:       3px;
 
+//** Color
 @gray-base:              #000;
 @gray-darker:            lighten(@gray-base, 13.5%); // #222
 @gray-dark:              lighten(@gray-base, 20%);   // #333
@@ -51,6 +54,7 @@
 
 @btn-font-weight:                normal;
 
+//** Button
 @btn-default-color:              @font-color-default;
 @btn-default-bg:                 #fff;
 @btn-default-border:             @brand-default;
@@ -110,3 +114,28 @@
 @input-group-addon-bg:           @gray-lighter;
 //** Border color for textual input addons
 @input-group-addon-border-color: @input-border;
+
+//** Transitions - Based on Vue Material
+@swift-ease-out-duration: .4s;
+@swift-ease-out-timing-function: cubic-bezier(.25, .8, .25, 1);
+@swift-ease-out: all @swift-ease-out-duration @swift-ease-out-timing-function;
+
+@swift-ease-in-duration: .3s;
+@swift-ease-in-timing-function: cubic-bezier(.55, 0, .55, .2);
+@swift-ease-in: all @swift-ease-in-duration @swift-ease-in-timing-function;
+
+@swift-ease-in-out-duration: .5s;
+@swift-ease-in-out-timing-function: cubic-bezier(.35, 0, .25, 1);
+@swift-ease-in-out: all @swift-ease-in-out-duration @swift-ease-in-out-timing-function;
+
+@swift-linear-duration: .15s;
+@swift-linear-timing-function: linear;
+@swift-linear: all @swift-linear-duration @swift-linear-timing-function;
+
+@material-enter-duration: .3s;
+@material-enter-timing-function: cubic-bezier(.0, .0, .2, 1);
+@material-enter: all @material-enter-duration @material-enter-timing-function;
+
+@material-leave-duration: .3s;
+@material-leave-timing-function: cubic-bezier(.4, .0, 1, 1);
+@material-leave: all @material-leave-duration @material-leave-timing-function;

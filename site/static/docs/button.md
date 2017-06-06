@@ -1,15 +1,12 @@
 <script>
     
-    import { button, buttonGroup } from 'vcomponent'
     import vcDemo from 'sitecomponent/demo'
 
     export default {
 
         components: {
 
-            vcDemo,
-            vcButtonGroup: buttonGroup,
-            vcButton: button
+            vcDemo
         }
     }
 </script>

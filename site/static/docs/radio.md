@@ -1,7 +1,5 @@
 <script>
     
-    import { radio } from 'vcomponent'
-    import { radioGroup } from 'vcomponent'
     import vcDemo from 'sitecomponent/demo'
 
     export default {
@@ -19,9 +17,7 @@
 
         components: {
 
-            vcDemo,
-            vcRadio: radio,
-            vcRadioGroup: radioGroup
+            vcDemo
         },
 
         methods: {

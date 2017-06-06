@@ -19,6 +19,8 @@
 
 	export default {
 
+		name: 'vc-radio',
+
 		props: {
 
 			'vc-value': null,
@@ -62,4 +64,4 @@
 	
 </script>
 
-<style src="vcless/radio" lang="less"></style>
+<style src="./radio.less" lang="less"></style>

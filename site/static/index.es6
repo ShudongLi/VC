@@ -44,6 +44,36 @@ const BASE_URL = '/vc'
 Vue.use(VueRouter)
 Vue.use(VueComponent)
 
+//设置主题
+// Vue.config.vcTheme = {
+
+// 	aaa: {
+
+// 		default: {
+
+// 			color: 'red',
+// 			background: '#fff',
+// 			border: '#ccc'
+// 		}
+// 	},
+// 	bbb: {
+
+// 		primary: {
+
+// 			color: 'red',
+// 			background: '#fff',
+// 			border: '#ccc'
+// 		}
+// 	}
+// }
+
+// Vue.vcSkin('aaa')
+
+// setTimeout(()=>{
+
+// 	Vue.vcSkin('bbb')
+// }, 10000)
+
 let router = new VueRouter({
 
 	hashbang: true,

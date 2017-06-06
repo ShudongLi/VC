@@ -13,9 +13,7 @@
 <script>
 
 	import { getClassPrefix } from 'vcutils'
-	import mixins from '../mixins'
-
-	import icon from './icon'
+	import mixins from '../../mixins'
 
 	const prefix = getClassPrefix('button')
 	
@@ -81,14 +79,9 @@
 
 				return classes
 			}
-		},
-
-		components: {
-
-			vcIcon: icon
 		}
 	}
 
 </script>
 
-<style src="vcless/button" lang="less"></style>
+<style src="./button.less" lang="less"></style>

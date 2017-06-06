@@ -17,7 +17,7 @@ alias:
    sitecomponent: ./site/static/js/components 
    vcomponent: ./src
    vconstant: './src/constant'
-   vcless: ./src/less/components
+   vcless: ./src/style/components
    vcutils: ./src/utils
   vendor:
    vue: vue/dist/vue.js
@@ -39,7 +39,7 @@ component:
  # 根路径
  entry: ./src/index.es6
  # less
- less: ./src/less/index.less
+ less: ./src/style/index.less
  # alias变量
  apps: ./static/js/src/apps
  bases: ./static/js/src/bases

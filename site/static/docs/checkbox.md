@@ -1,6 +1,5 @@
 <script>
     
-    import { checkbox, checkboxGroup } from 'vcomponent'
     import vcDemo from 'sitecomponent/demo'
 
     export default {
@@ -17,9 +16,7 @@
 
         components: {
 
-            vcDemo,
-            vcCheckbox: checkbox,
-            vcCheckboxGroup: checkboxGroup
+            vcDemo
         }
     }
 </script>

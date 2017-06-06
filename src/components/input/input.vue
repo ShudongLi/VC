@@ -2,8 +2,11 @@
 
 	<div class="vc-input" :class="inputClass">
 		
-		<template v-if="!vcTextarea">
-			
+		<template v-if="!textarea">
+			<div class="vc-input-prepend" 
+				v-if="(_slotContents && _slotContents.prepend) || ($slots && $slots.prepend)">
+				<slot name="prepend"></slot>
+			</div>
 			<vc-icon class="vc-input-icon" 
 				:vc-name="vcIcon" 
 				@click.native="handleClick"
@@ -18,6 +21,7 @@
 		</template>
 		<textarea class="vc-textarea-original" 
 			v-model="vcModel"
+			:rows="vcRows"
 			:style="textareaStyle"
 			:placeholder="placeholder"
 			:disabled="disabled" 
@@ -34,42 +38,47 @@
 
 	import { calcTextareaHeight } from 'vcutils'
 
-	import icon from './icon'
-
 	export default {
+
+		name: 'vc-input',
 
 		props: {
 
 			'vc-model': null,
+			//icon值
 			'vc-icon': String,
-			'vc-textarea': {
+			//初始化行数
+			'vc-rows': {
 
-				type: Boolean,
-				default: false
+				type: Number,
+				default: 2
 			},
+			//是否自适应
 			'vc-autoSize': {
 
 				type: Boolean,
 				default: false
 			},
+			//是否可调整大小
 			'vc-resize': {
 
 				type: String,
-				default: 'none'
+				default: 'vertical'
 			},
 			value: null,
 			placeholder: String,
+			//是否文本域
+			textarea: {
+
+				type: Boolean,
+				default: false
+			},
 			disabled: {
 
 				type: Boolean,
 				default: false
 			},
 			readonly: {
-
-				type: Boolean,
-				default: false
-			},
-			resize: {
 
 				type: Boolean,
 				default: false
@@ -100,15 +109,18 @@
 
 			textareaStyle() {
 
+				if(this.vcAutoSize) {
+
+					return Object.assign({}, this.textareaCalcStyle, {
+
+						resize: 'none'
+					})
+				}
+
 				return Object.assign({}, this.textareaCalcStyle, {
 					resize: this.vcResize
 				})
 			}
-		},
-
-		components: {
-
-			vcIcon: icon
 		},
 
 		watch: {
@@ -123,16 +135,12 @@
 
 			resizeTextarea() {
 
-				let textarea = this.$el.querySelector('.vc-textarea-original')
+				if(this.textarea && this.vcAutoSize) {
 
-				let { vcTextarea } = this
+					let textarea = this.$el.querySelector('.vc-textarea-original')
 
-				if(!vcTextarea) {
-
-					return 
+					this.textareaCalcStyle = calcTextareaHeight(textarea)
 				}
-
-				this.textareaCalcStyle = calcTextareaHeight(textarea)
 			},
 
 			handleClick() {
@@ -140,6 +148,11 @@
 				this.$emit('icon.click')
 			}
 		},
+
+		ready() {
+
+			this.resizeTextarea()
+		}
 	}
 
 </script>

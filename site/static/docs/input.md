@@ -1,6 +1,5 @@
 <script>
     
-    import { input } from 'vcomponent'
     import vcDemo from 'sitecomponent/demo'
 
     export default {
@@ -9,14 +8,17 @@
 
             return {
                 
-                basicModel: ''
+                basicModel: '',
+                readonlyModel: '我不会被修改哦',
+                iconModel: '',
+                resizeModel: '',
+                resizeAutoModel: ''
             }
         },
 
         components: {
 
-            vcDemo,
-            vcInput: input,
+            vcDemo
         }
     }
 </script>
@@ -37,7 +39,21 @@
 </div>
 
 ```html
-<vc-input placeholder="请输入内容"></vc-input>
+<vc-input :vc-model.sync="basicModel" placeholder="请输入内容"></vc-input>
+
+<script>
+    
+    export default {
+
+        data() {
+
+            return {
+
+                basicModel: ''
+            }
+        }
+    }
+</script>
 ```
 
 </vc-demo>
@@ -47,11 +63,25 @@
 <vc-demo>
 
 <div slot="example">
-<vc-input placeholder="请输入内容" readonly></vc-input>
+<vc-input :vc-model.sync="readonlyModel" placeholder="请输入内容" readonly></vc-input>
 </div>
 
 ```html
-<vc-input placeholder="请输入内容" readonly></vc-input>
+<vc-input :vc-model.sync="readonlyModel" placeholder="请输入内容" readonly></vc-input>
+
+<script>
+    
+    export default {
+
+        data() {
+
+            return {
+
+                readonlyModel: '我不会被修改哦'
+            }
+        }
+    }
+</script>
 ```
 
 </vc-demo>
@@ -75,30 +105,68 @@
 <vc-demo>
 
 <div slot="example">
-<vc-input :vc-model.sync="basicModel" placeholder="请输入内容" vc-icon="search"></vc-input>
+<vc-input :vc-model.sync="iconModel" placeholder="请输入内容" vc-icon="search"></vc-input>
 </div>
 
 ```html
-<vc-input placeholder="请输入内容" vc-icon="search"></vc-input>
+<vc-input :vc-model.sync="iconModel" placeholder="请输入内容" vc-icon="search"></vc-input>
+
+<script>
+    
+    export default {
+
+        data() {
+
+            return {
+
+                iconModel: ''
+            }
+        }
+    }
+</script>
 ```
 
 </vc-demo>
 
-文本域
+文本域，可指定为`textarea`，也可通过`vc-auto-size`设置为自动调整高度的文本域。
 
 <vc-demo>
 
 <div slot="example">
 <p>
-   <vc-input :vc-model.sync="basicModel" placeholder="请输入内容" vc-textarea></vc-input> 
+   <vc-input :vc-model.sync="resizeModel" placeholder="请输入内容" textarea></vc-input> 
 </p>
 <p>
-   <vc-input :vc-model.sync="basicModel" placeholder="请输入内容" vc-resize="both"vc-textarea></vc-input> 
+   <vc-input :vc-model.sync="resizeAutoModel" placeholder="请输入内容" vc-auto-size textarea></vc-input> 
 </p>
+
 </div>
 
 ```html
-<vc-input placeholder="请输入内容" vc-icon="search"></vc-input>
+
+<vc-input :vc-model.sync="resizeModel" placeholder="请输入内容" textarea></vc-input>
+
+<vc-input :vc-model.sync="resizeAutoModel" placeholder="请输入内容" vc-auto-size textarea ></vc-input>
+```
+
+</vc-demo>
+
+复合型输入框。
+
+<vc-demo>
+
+<div slot="example">
+<vc-input :vc-model.sync="resizeModel" placeholder="请输入内容">
+    <div slot="prepend">Http://</div>
+</vc-input> 
+
+</div>
+
+```html
+
+<vc-input :vc-model.sync="resizeModel" placeholder="请输入内容" textarea></vc-input>
+
+<vc-input :vc-model.sync="resizeAutoModel" vc-auto-size placeholder="请输入内容" textarea></vc-input>
 ```
 
 </vc-demo>

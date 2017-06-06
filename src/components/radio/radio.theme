@@ -1,0 +1,60 @@
+.THEME_NAME {
+	
+
+	.vc-radio {
+
+		.vc-radio-input {
+
+			.vc-radio-inner {
+
+				background-color: vc_default_background;
+				border-color: vc_default_border;
+
+				&:hover {
+
+					border-color: vc_default_hover_border;
+				}
+
+				&:after {
+
+					background-color: vc_default_background;
+				}
+			}
+
+			&.is-active {
+
+				.vc-radio-inner {
+
+					background-color: vc_primary_background;
+
+					&:hover {
+
+				    	border-color: vc_primary_hover_background;
+				    }
+
+				    &:after {
+
+				    	background-color: vc_default_background;
+				    }
+				}
+			}
+
+			&.disabled,
+			&[disabled],
+			&.disabled + span,
+			fieldset[disabled] & {
+				
+				.vc-radio-inner {
+			
+					background-color: vc_disabled_background;
+
+					&:hover {
+
+				    	border: none;
+				    }
+				}
+			}		
+		}
+		
+	}
+}

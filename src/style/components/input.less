@@ -12,7 +12,6 @@
 		
 		color: @input-color;
 		width: 100%;
-		height: @input-height-base; 
 		padding: @padding-base-vertical @padding-base-horizontal;
 		line-height: @line-height-base;
 	    background-color: #fff;
@@ -31,6 +30,8 @@
 		&[disabled],
 		&[readonly],
 		fieldset[disabled] & {
+			
+			color: @input-color-placeholder;
 			background-color: @input-bg-disabled;
 			opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
 		}
@@ -42,8 +43,14 @@
 	    
 	}
 
+	.vc-input-original {
+
+		height: @input-height-base; 
+	}
+
 	.vc-input-icon {
 		
+		color: inherit;
 		width: @icon-width;
 		height: @input-height-base; 
 		line-height: @input-height-base;
@@ -53,10 +60,22 @@
 		top: 0;
 		right: 0;
 
+		&:active {
+
+			color: @font-color-default;
+		}
+
 		& + input {
 
 			padding-right: @icon-width;
 		}
+	}
+
+	.vc-input-prepend {
+
+		padding: @padding-base-vertical @padding-base-horizontal;
+		line-height: @line-height-base;
+		float: left;
 	}
 }
 
