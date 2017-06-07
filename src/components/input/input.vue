@@ -3,21 +3,30 @@
 	<div class="vc-input" :class="inputClass">
 		
 		<template v-if="!textarea">
-			<div class="vc-input-prepend" 
-				v-if="(_slotContents && _slotContents.prepend) || ($slots && $slots.prepend)">
+			<label class="vc-input-prepend"
+				:for="name"
+				v-if="$slots.prepend">
 				<slot name="prepend"></slot>
-			</div>
+			</label>
 			<vc-icon class="vc-input-icon" 
 				:vc-name="vcIcon" 
 				@click.native="handleClick"
 				v-if="vcIcon" 
 			></vc-icon>
-			<input type="text" class="vc-input-original" 
+			<input :id="name" 
+				type="text" 
+				class="vc-input-original"
+				:style="originalStyle" 
 				:placeholder="placeholder" 
 				:disabled="disabled" 
 				:readonly="readonly" 
 				v-model="vcModel"
 			>
+			<label class="vc-input-append"
+				:for="name"
+				v-if="$slots.append">
+				<slot name="append"></slot>
+			</label>
 		</template>
 		<textarea class="vc-textarea-original" 
 			v-model="vcModel"
@@ -36,7 +45,10 @@
 
 <script>
 
-	import { calcTextareaHeight } from 'vcutils'
+	import { calcTextareaHeight, getClassPrefix } from 'vcutils'
+	import mixins from '../../mixins'
+
+	const prefix = getClassPrefix('input')
 
 	export default {
 
@@ -67,6 +79,7 @@
 			},
 			value: null,
 			placeholder: String,
+			name: String,
 			//是否文本域
 			textarea: {
 
@@ -104,7 +117,31 @@
 					classes.push('disabled')
 				}
 
+				if(this.$slots.prepend || this.$slots.append) {
+
+					classes.push(prefix + 'group')
+				}
+
 				return classes
+			},
+
+			originalStyle() {
+
+				let radius = {}
+
+				if(this.$slots.prepend){
+
+					radius['border-top-left-radius'] = 0
+					radius['border-bottom-left-radius'] = 0
+				}
+
+				if(this.$slots.append) {
+
+					radius['border-top-right-radius'] = 0
+					radius['border-bottom-right-radius'] = 0
+				}
+
+				return radius
 			},
 
 			textareaStyle() {
@@ -130,6 +167,8 @@
 				this.resizeTextarea()
 			}
 		},
+
+		mixins: [...mixins],
 
 		methods: {
 
@@ -157,4 +196,4 @@
 
 </script>
 
-<style src="vcless/input" lang="less"></style>
+<style src="./input.less" lang="less"></style>

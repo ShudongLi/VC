@@ -7,6 +7,7 @@
 import localeInstall from './locale'
 import themeInstall from './theme/index'
 import defaultTheme from './theme/theme'
+import polyfillInstall from './polyfill'
 
 import icon from './components/icon/index'
 import button from './components/button/index'
@@ -35,6 +36,8 @@ function install(Vue) {
 	localeInstall(Vue)
 	//主题安装
 	themeInstall(Vue)
+	//兼容性安装
+	polyfillInstall(Vue)
 	//组件安装
 	components.forEach(component => {
 
@@ -57,16 +60,4 @@ if(typeof window !== 'undefined' && window.Vue) {
 export default {
 
 	install
-}
-
-export {
-
-	button,
-	buttonGroup,
-	icon,
-	radio,
-	radioGroup,
-	checkbox,
-	checkboxGroup,
-	input
 }

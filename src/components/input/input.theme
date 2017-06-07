@@ -1,0 +1,33 @@
+.THEME_NAME {
+	
+	.vc-input {
+
+		.vc-input-original, .vc-textarea-original {
+
+			border-color: vc_default_border;
+			background-color: vc_default_background;
+
+			&:focus {
+	    	
+				border-color: vc_info_border;
+			}
+
+			&[disabled],
+			&[readonly],
+			fieldset[disabled] & {
+				
+				background-color: vc_default_darken_background;
+			}
+
+		}
+
+		&.vc-input-group {
+		
+			.vc-input-prepend, .vc-input-append{
+				
+		    	border-color: vc_default_border;
+		    	background-color: vc_default_darken_background;
+			}
+		}
+	}
+}

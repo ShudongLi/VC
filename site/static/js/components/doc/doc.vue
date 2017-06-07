@@ -67,5 +67,13 @@
 				}
 			}
 		}
+
+		.vc-demo {
+
+			.vc-input {
+
+				margin-bottom: @base-space;
+			}
+		}
 	}
 </style>

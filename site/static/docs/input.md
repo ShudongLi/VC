@@ -12,7 +12,8 @@
                 readonlyModel: '我不会被修改哦',
                 iconModel: '',
                 resizeModel: '',
-                resizeAutoModel: ''
+                resizeAutoModel: '',
+                compoundMolde: '',
             }
         },
 
@@ -133,12 +134,8 @@
 <vc-demo>
 
 <div slot="example">
-<p>
-   <vc-input :vc-model.sync="resizeModel" placeholder="请输入内容" textarea></vc-input> 
-</p>
-<p>
-   <vc-input :vc-model.sync="resizeAutoModel" placeholder="请输入内容" vc-auto-size textarea></vc-input> 
-</p>
+<vc-input :vc-model.sync="resizeModel" placeholder="请输入内容" textarea></vc-input> 
+<vc-input :vc-model.sync="resizeAutoModel" placeholder="请输入内容" vc-auto-size textarea></vc-input> 
 
 </div>
 
@@ -156,17 +153,21 @@
 <vc-demo>
 
 <div slot="example">
-<vc-input :vc-model.sync="resizeModel" placeholder="请输入内容">
-    <div slot="prepend">Http://</div>
+<vc-input :vc-model.sync="compoundMolde" name="http1" placeholder="请输入内容">
+<span slot="prepend">Http://</span>
+</vc-input>
+<vc-input :vc-model.sync="compoundMolde" name="http2" placeholder="请输入内容">
+<span slot="append">.com</span>
 </vc-input> 
-
+<vc-input :vc-model.sync="compoundMolde" name="http3" placeholder="请输入内容">
+<span slot="prepend">Http://</span>
+<span slot="append">.com</span>
+</vc-input>
 </div>
 
 ```html
 
-<vc-input :vc-model.sync="resizeModel" placeholder="请输入内容" textarea></vc-input>
-
-<vc-input :vc-model.sync="resizeAutoModel" vc-auto-size placeholder="请输入内容" textarea></vc-input>
+<vc-input :vc-model.sync="compoundMolde" name="http" placeholder="请输入内容"></vc-input>
 ```
 
 </vc-demo>

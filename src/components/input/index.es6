@@ -1,4 +1,5 @@
 import input from './input'
+import theme from './input.theme'
 
 input.install = function(Vue) {
 
@@ -8,6 +9,7 @@ input.install = function(Vue) {
 	}
 
 	Vue.component(input.name, input)
+	Vue._registerStyle(theme)
 }
 
 export default input

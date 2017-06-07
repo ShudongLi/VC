@@ -111,28 +111,28 @@ function calcTheme(theme) {
 
 				color: color,
 				background: Color(background).darken(0.1).hex(),
-				border: Color(background).darken(0.25).hex()
+				border: Color(border).darken(0.25).hex()
 			}
 
 			style.hover = style.active = {
 
 				color: color,
 				background: Color(background).darken(0.1).hex(),
-				border: Color(background).darken(0.12).hex()
+				border: Color(border).darken(0.12).hex()
 			}
 
 			style.darken = {
 
-				color: color,
-				background: Color(background).darken(0.17).hex(),
-				border: Color(background).darken(0.25).hex()
+				color: Color(color).lighten(0.05).hex(),
+				background: Color(background).darken(0.15).hex(),
+				border: Color(border).darken(0.25).hex()
 			}
 
 			style.disabled = {
 
 				color: color,
 				background: background,
-				border: background
+				border: border
 			}
 		}
 	}
